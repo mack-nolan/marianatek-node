@@ -1,3 +1,4 @@
+import { generateAdminApi } from "./api/admin/index.js";
 import { request } from "./request.js";
 
 interface MarianatekClientOptions {
@@ -9,8 +10,14 @@ export async function createMarianatekClient(options: MarianatekClientOptions) {
   const { token, subdomain } = options;
 
   const baseRequest = request(token, subdomain);
+  const adminApi = generateAdminApi(baseRequest);
 
   return {
-    baseRequest,
+    admin: adminApi,
   };
 }
+
+const client = await createMarianatekClient({
+  token: "123",
+  subdomain: "sandbox",
+});
