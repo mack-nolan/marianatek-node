@@ -1,3 +1,3 @@
 import { KyInstance } from "ky";
 
-export function generateAdminApi(request: KyInstance) {}
+export function generateAdminApi(_request: KyInstance) {}
