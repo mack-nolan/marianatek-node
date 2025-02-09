@@ -1,9 +1,6 @@
 {
   "name": "@macknolandev/marianatek-node",
-  "repository": {
-    "type": "git",
-    "url": "@macknolandev/marianatek-node"
-  },
+  "repository": "mack-nolan/marianatek-node",
   "version": "0.0.2",
   "license": "MIT",
   "type": "module",
