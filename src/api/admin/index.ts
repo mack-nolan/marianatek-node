@@ -16,6 +16,18 @@ import { ClassSessionCategoriesApi } from "./endpoints/class_session_categories.
 import { ClassSessionNotesApi } from "./endpoints/class_session_notes.js";
 import { ClassSessionTagsApi } from "./endpoints/class_session_tags.js";
 import { ClassSessionTypesApi } from "./endpoints/class_session_types.js";
+import { ClassSessionsApi } from "./endpoints/class_sessions.js";
+import { ContractsApi } from "./endpoints/contracts.js";
+import { CountriesApi } from "./endpoints/countries.js";
+import { CreditTransactionsApi } from "./endpoints/credit_transactions.js";
+import { CreditsApi } from "./endpoints/credits.js";
+import { DefaultPartnerProductClassTaxRatesApi } from "./endpoints/default_partner_product_class_tax_rates.js";
+import { DiscountsApi } from "./endpoints/discounts.js";
+import { EmployeePayRatesApi } from "./endpoints/employee_pay_rates.js";
+import { EmployeesApi } from "./endpoints/employees.js";
+import { GiftCardInstancesApi } from "./endpoints/gift_card_instances.js";
+import { GroupsApi } from "./endpoints/groups.js";
+import { IdpApi } from "./endpoints/idp.js";
 import { paginateResults } from "./utils/paginate.js";
 
 export function generateAdminApi(request: KyInstance) {
@@ -38,6 +50,19 @@ export function generateAdminApi(request: KyInstance) {
     classSessionNotes: new ClassSessionNotesApi(request),
     classSessionTags: new ClassSessionTagsApi(request),
     classSessionTypes: new ClassSessionTypesApi(request),
+    classSessions: new ClassSessionsApi(request),
+    contracts: new ContractsApi(request),
+    countries: new CountriesApi(request),
+    creditTransactions: new CreditTransactionsApi(request),
+    credits: new CreditsApi(request),
+    defaultPartnerProductClassTaxRates:
+      new DefaultPartnerProductClassTaxRatesApi(request),
+    discounts: new DiscountsApi(request),
+    employeePayRates: new EmployeePayRatesApi(request),
+    employees: new EmployeesApi(request),
+    giftCardInstances: new GiftCardInstancesApi(request),
+    groups: new GroupsApi(request),
+    idp: new IdpApi(request),
   };
 }
 
