@@ -3,6 +3,10 @@
   "version": "0.0.6",
   "license": "MIT",
   "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mackenzienolan/marianatek-node.git"
+  },
   "exports": {
     "types": "./distribution/index.d.ts",
     "default": "./distribution/index.js"
