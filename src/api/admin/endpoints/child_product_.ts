@@ -2,7 +2,7 @@ import { KyInstance } from "ky";
 import { BaseListOptions } from "../../models.js";
 import { createSearchParams } from "../../searchParams.js";
 
-interface ChildProductListOptions extends BaseListOptions {
+interface ChildProduct_ListOptions extends BaseListOptions {
   active_at_partner?: boolean;
   credit?: boolean;
   credit_membership_locations?: boolean;
@@ -51,10 +51,10 @@ interface ChildProductCreate {
   sku?: string;
 }
 
-export class ChildProductApi {
+export class ChildProduct_Api {
   constructor(private readonly request: KyInstance) {}
 
-  async list(product_class: string, options?: ChildProductListOptions) {
+  async list(product_class: string, options?: ChildProduct_ListOptions) {
     const searchParams = createSearchParams(options);
     const response = await this.request
       .get(basePath(product_class), { searchParams })
