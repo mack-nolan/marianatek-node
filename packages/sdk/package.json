@@ -1,7 +1,7 @@
 {
   "name": "@macknolandev/marianatek-node",
   "repository": "mack-nolan/marianatek-node",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "license": "MIT",
   "type": "module",
   "exports": {
