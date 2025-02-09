@@ -38,6 +38,19 @@ import { MembershipTransactionsApi } from "./endpoints/membership_transactions.j
 import { MembershipsApi } from "./endpoints/memberships.js";
 import { NotesApi } from "./endpoints/notes.js";
 import { OrderLinesApi } from "./endpoints/order_lines.js";
+import { OrdersApi } from "./endpoints/orders.js";
+import { PackagesApi } from "./endpoints/packages.js";
+import { ParentInventoryTransactionsApi } from "./endpoints/parent_inventory_transactions.js";
+import { PartnersApi } from "./endpoints/partners.js";
+import { PaymentGatewaysApi } from "./endpoints/payment_gateways.js";
+import { PaymentOptionsApi } from "./endpoints/payment_options.js";
+import { PaymentPermissionSpecificationsApi } from "./endpoints/payment_permission_specifications.js";
+import { PenaltyFeesApi } from "./endpoints/penalty_fees.js";
+import { PosProductsApi } from "./endpoints/pos_products.js";
+import { PrivateImagesApi } from "./endpoints/private_images.js";
+import { Product_Api } from "./endpoints/product_.js";
+import { ProductClassesApi } from "./endpoints/product_classes.js";
+import { ProductCollectionToProductComparisonAssignmentsApi } from "./endpoints/product_collection_to_product_comparison_assignments.js";
 import { paginateResults } from "./utils/paginate.js";
 
 export function generateAdminApi(request: KyInstance) {
@@ -83,6 +96,22 @@ export function generateAdminApi(request: KyInstance) {
     memberships: new MembershipsApi(request),
     notes: new NotesApi(request),
     orderLines: new OrderLinesApi(request),
+    orders: new OrdersApi(request),
+    packages: new PackagesApi(request),
+    parentInventoryTransactions: new ParentInventoryTransactionsApi(request),
+    partners: new PartnersApi(request),
+    paymentGateways: new PaymentGatewaysApi(request),
+    paymentOptions: new PaymentOptionsApi(request),
+    paymentPermissionSpecifications: new PaymentPermissionSpecificationsApi(
+      request
+    ),
+    penaltyFees: new PenaltyFeesApi(request),
+    posProducts: new PosProductsApi(request),
+    privateImages: new PrivateImagesApi(request),
+    product_: new Product_Api(request),
+    productClasses: new ProductClassesApi(request),
+    productCollectionToProductComparisonAssignments:
+      new ProductCollectionToProductComparisonAssignmentsApi(request),
   };
 }
 
