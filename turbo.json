@@ -8,6 +8,9 @@
     "check-types": {
       "dependsOn": ["^check-types"]
     },
+    "release": {
+      "dependsOn": ["^release"]
+    },
     "dev": {
       "persistent": true,
       "cache": false
