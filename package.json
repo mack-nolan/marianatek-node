@@ -41,7 +41,7 @@
     "lint": "eslint src/",
     "typecheck": "tsc --noEmit",
     "test": "vitest --run --passWithNoTests",
-    "release": "np patch"
+    "release": "np"
   },
   "packageManager": "pnpm@9.12.2",
   "publishConfig": {
