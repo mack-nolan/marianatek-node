@@ -32,7 +32,8 @@
   },
   "devDependencies": {
     "np": "^10.2.0",
-    "tsup": "^8.3.6"
+    "tsup": "^8.3.6",
+    "vitest": "^3.0.5"
   },
   "dependencies": {
     "ky": "^1.7.4"
