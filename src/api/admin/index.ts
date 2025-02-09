@@ -28,6 +28,16 @@ import { EmployeesApi } from "./endpoints/employees.js";
 import { GiftCardInstancesApi } from "./endpoints/gift_card_instances.js";
 import { GroupsApi } from "./endpoints/groups.js";
 import { IdpApi } from "./endpoints/idp.js";
+import { IntegrationsApi } from "./endpoints/integrations.js";
+import { InventoryTransactionsApi } from "./endpoints/inventory_transactions.js";
+import { LateCancelWindowsApi } from "./endpoints/late_cancel_windows.js";
+import { LayoutsApi } from "./endpoints/layouts.js";
+import { LocationsApi } from "./endpoints/locations.js";
+import { MembershipInstancesApi } from "./endpoints/membership_instances.js";
+import { MembershipTransactionsApi } from "./endpoints/membership_transactions.js";
+import { MembershipsApi } from "./endpoints/memberships.js";
+import { NotesApi } from "./endpoints/notes.js";
+import { OrderLinesApi } from "./endpoints/order_lines.js";
 import { paginateResults } from "./utils/paginate.js";
 
 export function generateAdminApi(request: KyInstance) {
@@ -63,6 +73,16 @@ export function generateAdminApi(request: KyInstance) {
     giftCardInstances: new GiftCardInstancesApi(request),
     groups: new GroupsApi(request),
     idp: new IdpApi(request),
+    integrations: new IntegrationsApi(request),
+    inventoryTransactions: new InventoryTransactionsApi(request),
+    lateCancelWindows: new LateCancelWindowsApi(request),
+    layouts: new LayoutsApi(request),
+    locations: new LocationsApi(request),
+    membershipInstances: new MembershipInstancesApi(request),
+    membershipTransactions: new MembershipTransactionsApi(request),
+    memberships: new MembershipsApi(request),
+    notes: new NotesApi(request),
+    orderLines: new OrderLinesApi(request),
   };
 }
 
