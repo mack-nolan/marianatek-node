@@ -3,14 +3,24 @@
   "version": "0.0.1",
   "private": true,
   "license": "MIT",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "type": "module",
+  "exports": {
+    "types": "./distribution/index.d.ts",
+    "default": "./distribution/index.js"
+  },
+  "main": "./distribution/index.js",
+  "types": "./distribution/index.d.ts",
+  "sideEffects": false,
+  "engines": {
+    "node": ">=18"
+  },
   "scripts": {
     "build": "tsup src/index.ts --format cjs,esm --dts",
     "clean": "rm -rf dist",
     "dev": "tsup src/index.ts --format cjs,esm --watch --dts",
     "lint": "eslint src/",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "release": "np"
   },
   "files": [
     "dist",
@@ -20,6 +30,10 @@
     "access": "public"
   },
   "devDependencies": {
+    "np": "^10.2.0",
     "tsup": "^8.3.6"
+  },
+  "dependencies": {
+    "ky": "^1.7.4"
   }
 }
