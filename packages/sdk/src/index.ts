@@ -16,8 +16,3 @@ export async function createMarianatekClient(options: MarianatekClientOptions) {
     admin: adminApi,
   };
 }
-
-const client = await createMarianatekClient({
-  token: "123",
-  subdomain: "sandbox",
-});

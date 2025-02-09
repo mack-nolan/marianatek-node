@@ -1,7 +1,7 @@
 {
   "name": "@macknolandev/marianatek-node",
   "repository": "mack-nolan/marianatek-node",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "license": "MIT",
   "type": "module",
   "exports": {
@@ -29,7 +29,7 @@
     "lint": "eslint src/",
     "typecheck": "tsc --noEmit",
     "test": "vitest --run --passWithNoTests",
-    "release": "np"
+    "release": "np patch"
   },
   "publishConfig": {
     "access": "public"
