@@ -1,9 +1,5 @@
 + .turbo
-docs/.vitepress/cache
-docs/.vitepress/dist
 node_modules
-dist
 .DS_Store
-.turbo
-.turbo/*
+
 distribution

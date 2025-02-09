@@ -1,25 +1,34 @@
 {
-  "compileOnSave": false,
   "compilerOptions": {
-    "alwaysStrict": false,
+    "outDir": "${configDir}/distribution",
+    "module": "node16",
+    "moduleResolution": "node16",
+    "moduleDetection": "force",
+    "target": "esnext",
+    "lib": [
+      "DOM",
+      "DOM.Iterable",
+      "ES2022" // Node.js 18
+    ],
+    "resolveJsonModule": false, // ESM doesn't yet support JSON modules.
+    "jsx": "react",
     "declaration": true,
-    "declarationMap": false,
-    "downlevelIteration": true,
-    "forceConsistentCasingInFileNames": true,
-    "importHelpers": true,
-    "lib": ["es6"],
-    "module": "commonjs",
-    "moduleResolution": "node",
-    "noEmitHelpers": true,
-    "noFallthroughCasesInSwitch": true,
+    "newLine": "lf",
+    "stripInternal": true,
+    "strict": true,
     "noImplicitReturns": true,
+    "noImplicitOverride": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "pretty": true,
-    "sourceMap": false,
-    "strict": true,
-    "target": "ES2019",
-    "noErrorTruncation": true
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedIndexedAccess": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noUncheckedSideEffectImports": true,
+    "noEmitOnError": true,
+    "useDefineForClassFields": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true
   },
-  "exclude": ["node_modules", "dist", "**/dist/**", "packages/*/dist/**"]
+  "include": ["./src"],
+  "exclude": ["node_modules", "distribution"]
 }

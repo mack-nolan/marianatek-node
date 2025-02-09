@@ -1,25 +1,47 @@
 {
-  "name": "@macknolandev/marianatek",
-  "version": "0.0.1",
-  "private": true,
+  "name": "@macknolandev/marianatek-node",
+  "version": "0.0.5",
   "license": "MIT",
+  "type": "module",
+  "exports": {
+    "types": "./distribution/index.d.ts",
+    "default": "./distribution/index.js"
+  },
+  "files": [
+    "distribution"
+  ],
+  "main": "./distribution/index.js",
+  "types": "./distribution/index.d.ts",
+  "sideEffects": false,
+  "engines": {
+    "node": ">=18"
+  },
+  "author": {
+    "name": "Mackenzie Nolan",
+    "email": "mack@macknolan.com",
+    "url": "https://macknolan.dev"
+  },
   "scripts": {
-    "dev": "turbo dev",
-    "build": "turbo build",
-    "clean": "turbo clean",
-    "changeset": "changeset",
-    "changeset:empty": "pnpm changeset --empty",
-    "format": "prettier --write .",
-    "format:check": "prettier --cache --check .",
-    "prepare": "husky install",
-    "release": "turbo release",
-    "docs:dev": "vitepress dev docs",
-    "docs:build": "vitepress build docs",
-    "docs:preview": "vitepress preview docs"
+    "build": "del-cli distribution && tsc --project tsconfig.dist.json",
+    "clean": "rm -rf dist",
+    "dev": "tsup src/index.ts --format cjs,esm --watch --dts",
+    "lint": "eslint src/",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest --run --passWithNoTests",
+    "release": "np patch"
   },
   "packageManager": "pnpm@9.12.2",
+  "publishConfig": {
+    "access": "public"
+  },
   "devDependencies": {
-    "husky": "^9.1.7",
-    "turbo": "^2.4.0"
+    "del-cli": "^6.0.0",
+    "np": "^10.2.0",
+    "tsup": "^8.3.6",
+    "vitest": "^3.0.5"
+  },
+  "dependencies": {
+    "ky": "^1.7.4",
+    "zod": "^3.24.1"
   }
 }
