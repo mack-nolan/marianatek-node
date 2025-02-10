@@ -1,7 +1,7 @@
 {
   "name": "@macknolandev/marianatek-node",
   "description": "A Node.js client for the Mariana Tek API",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "license": "MIT",
   "type": "module",
   "repository": {
