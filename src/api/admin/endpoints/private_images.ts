@@ -3,7 +3,9 @@ import { KyInstance } from "ky";
 export class PrivateImagesApi {
   constructor(private readonly request: KyInstance) {}
 
-  async create(formData: FormData) {
+  async create({ image }: { image: File }) {
+    const formData = new FormData();
+    formData.append("image", image);
     const response = await this.request
       .post(basePath, {
         body: formData,

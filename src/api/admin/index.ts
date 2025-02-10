@@ -51,6 +51,19 @@ import { PrivateImagesApi } from "./endpoints/private_images.js";
 import { Product_Api } from "./endpoints/product_.js";
 import { ProductClassesApi } from "./endpoints/product_classes.js";
 import { ProductCollectionToProductComparisonAssignmentsApi } from "./endpoints/product_collection_to_product_comparison_assignments.js";
+import { ProductCollectionsApi } from "./endpoints/product_collections.js";
+import { ProductComparisonToProductAssignmentsApi } from "./endpoints/product_comparison_to_product_assignments.js";
+import { ProductPromotionToChildProductAssignmentsApi } from "./endpoints/product_promotion_to_child_product_assignments.js";
+import { ProductPromotionsApi } from "./endpoints/product_promotions.js";
+import { ProductVariantsApi } from "./endpoints/product_variants.js";
+import { ProductsApi } from "./endpoints/products.js";
+import { PublicImagesApi } from "./endpoints/public_images.js";
+import { QuickSaleProductsApi } from "./endpoints/quick_sale_products.js";
+import { RegionsApi } from "./endpoints/regions.js";
+import { ReportCategoriesApi } from "./endpoints/report_categories.js";
+import { ReservationLogMessagesApi } from "./endpoints/reservation_log_messages.js";
+import { ReservationTagsApi } from "./endpoints/reservation_tags.js";
+import { ReservationsApi } from "./endpoints/reservations.js";
 import { paginateResults } from "./utils/paginate.js";
 
 export function generateAdminApi(request: KyInstance) {
@@ -112,6 +125,21 @@ export function generateAdminApi(request: KyInstance) {
     productClasses: new ProductClassesApi(request),
     productCollectionToProductComparisonAssignments:
       new ProductCollectionToProductComparisonAssignmentsApi(request),
+    productCollections: new ProductCollectionsApi(request),
+    productComparisonToProductssignments:
+      new ProductComparisonToProductAssignmentsApi(request),
+    productPromotionToChildProductsAssignments:
+      new ProductPromotionToChildProductAssignmentsApi(request),
+    productPromotions: new ProductPromotionsApi(request),
+    productVariants: new ProductVariantsApi(request),
+    products: new ProductsApi(request),
+    publicImages: new PublicImagesApi(request),
+    quickSaleProducts: new QuickSaleProductsApi(request),
+    regions: new RegionsApi(request),
+    reportCategories: new ReportCategoriesApi(request),
+    reservationLogMessages: new ReservationLogMessagesApi(request),
+    reservationTags: new ReservationTagsApi(request),
+    reservations: new ReservationsApi(request),
   };
 }
 
