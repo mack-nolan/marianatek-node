@@ -64,6 +64,26 @@ import { ReportCategoriesApi } from "./endpoints/report_categories.js";
 import { ReservationLogMessagesApi } from "./endpoints/reservation_log_messages.js";
 import { ReservationTagsApi } from "./endpoints/reservation_tags.js";
 import { ReservationsApi } from "./endpoints/reservations.js";
+import { RosterTagsApi } from "./endpoints/roster_tags.js";
+import { ShiftTypesApi } from "./endpoints/shift_types.js";
+import { SitesApi } from "./endpoints/sites.js";
+import { SkinnyChildProductsApi } from "./endpoints/skinny_child_products.js";
+import { SpotHoldsApi } from "./endpoints/spot_holds.js";
+import { SpotTypesApi } from "./endpoints/spot_types.js";
+import { SpotsApi } from "./endpoints/spots.js";
+import { StockRecordsApi } from "./endpoints/stock_records.js";
+import { TableReportDataApi } from "./endpoints/table_report_data.js";
+import { TableReportsApi } from "./endpoints/table_reports.js";
+import { TaxRatesApi } from "./endpoints/tax_rates.js";
+import { TenantBrandsApi } from "./endpoints/tenant_brands.js";
+import { TenantsApi } from "./endpoints/tenants.js";
+import { TimeClockShiftSettingsApi } from "./endpoints/time_clock_shift_settings.js";
+import { TimeClockShiftsApi } from "./endpoints/time_clock_shifts.js";
+import { UserNotesApi } from "./endpoints/user_notes.js";
+import { UserTagsApi } from "./endpoints/user_tags.js";
+import { UsersApi } from "./endpoints/users.js";
+import { WaitlistCutoffWindowsApi } from "./endpoints/waitlist_cutoff_windows.js";
+import { WebComponentsVersionsApi } from "./endpoints/web_components_versions.js";
 import { paginateResults } from "./utils/paginate.js";
 
 export function generateAdminApi(request: KyInstance) {
@@ -140,6 +160,26 @@ export function generateAdminApi(request: KyInstance) {
     reservationLogMessages: new ReservationLogMessagesApi(request),
     reservationTags: new ReservationTagsApi(request),
     reservations: new ReservationsApi(request),
+    rosterTags: new RosterTagsApi(request),
+    shiftTypes: new ShiftTypesApi(request),
+    sites: new SitesApi(request),
+    skinnyChildProducts: new SkinnyChildProductsApi(request),
+    spotHolds: new SpotHoldsApi(request),
+    spotTypes: new SpotTypesApi(request),
+    spots: new SpotsApi(request),
+    stockRecords: new StockRecordsApi(request),
+    tableReportData: new TableReportDataApi(request),
+    tableReports: new TableReportsApi(request),
+    taxRates: new TaxRatesApi(request),
+    tenantBrands: new TenantBrandsApi(request),
+    tenants: new TenantsApi(request),
+    timeClockShiftSettings: new TimeClockShiftSettingsApi(request),
+    timeClockShifts: new TimeClockShiftsApi(request),
+    userNotes: new UserNotesApi(request),
+    userTags: new UserTagsApi(request),
+    users: new UsersApi(request),
+    waitlistCutoffWindows: new WaitlistCutoffWindowsApi(request),
+    webComponentsVersions: new WebComponentsVersionsApi(request),
   };
 }
 
